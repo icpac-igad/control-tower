@@ -1,45 +1,45 @@
 {
-  "mongodb": {
-    "database": "control_tower_db",
-    "host": "localhost",
-    "port": 27017
-  },
-  "logger": {
-    "name": "API-Gateway-DEV",
-    "level": "debug",
-    "type": "console",
-    "toFile": false,
-    "stackdriver": false
-  },
-  "server": {
-    "port": 9000,
-    "publicUrl": "http://control.tower.dev:9000",
-    "internalUrl": "http://localhost:9000",
-    "cookie": {
-      "domain": "control.tower.dev"
+    "mongodb": {
+        "database": "control_tower_db",
+        "host": "localhost",
+        "port": 27017
     },
-    "sessionKey": "control-tower-key"
-  },
-  "microservice": {
-    "overrideDuplicated": true
-  },
-  "application": {
-    "name": "RW API",
-    "logo": "http://www.wri.org/sites/all/themes/wri/images/logo.png",
-    "principalColor": "#f1b319",
-    "sendNotifications": false,
-    "emailSenderName": "RW API"
-  },
-  "instapush": {
-    "token": "",
-    "id": "",
-    "secret": "",
-    "events": {
-      "microserviceDown": "microserviceDown",
-      "microserviceRestore": "microserviceRestore"
+    "logger": {
+        "name": "API-Gateway-DEV",
+        "level": "debug",
+        "type": "console",
+        "toFile": false,
+        "stackdriver": false
+    },
+    "server": {
+        "port": 9000,
+        "publicUrl": "http://control.tower.dev:9000",
+        "internalUrl": "http://localhost:9000",
+        "cookie": {
+            "domain": "control.tower.dev"
+        },
+        "sessionKey": "control-tower-key"
+    },
+    "microservice": {
+        "overrideDuplicated": true
+    },
+    "application": {
+        "name": "EACW API",
+        "logo": "https://www.icpac.net/media/images/icpac_logo.original.png",
+        "principalColor": "#f1b319",
+        "sendNotifications": false,
+        "emailSenderName": "info@promiseevents.co.ke"
+    },
+    "instapush": {
+        "token": "",
+        "id": "",
+        "secret": "",
+        "events": {
+            "microserviceDown": "microserviceDown",
+            "microserviceRestore": "microserviceRestore"
+        }
+    },
+    "jwt": {
+        "token": ""
     }
-  },
-  "jwt": {
-    "token": ""
-  }
 }
