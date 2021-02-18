@@ -21,8 +21,8 @@ COPY config /opt/$NAME/config
 
 WORKDIR /opt/$NAME
 
-COPY ./app /opt/$NAME/app
-RUN chown -R $USER:$USER /opt/$NAME
+COPY --chown=$USER:$USER ./app /opt/$NAME/app
+# RUN chown -R $USER:$USER /opt/$NAME
 
 # Tell Docker we are going to use this ports
 EXPOSE 9000

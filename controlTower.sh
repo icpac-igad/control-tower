@@ -2,7 +2,8 @@
 
 case "$1" in
     start)
-        yarn start
+        type docker-compose >/dev/null 2>&1 || { echo >&2 "docker-compose is required but it's not installed.  Aborting."; exit 1; }
+        docker-compose -f docker-compose-develop.yml build && docker-compose -f docker-compose-develop.yml up
         ;;
     develop)
         type docker-compose >/dev/null 2>&1 || { echo >&2 "docker-compose is required but it's not installed.  Aborting."; exit 1; }
